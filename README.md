@@ -12,3 +12,7 @@ Requirements:
 ```bash
 sudo sed -i 's/main/main non-free contrib/g' /etc/apt/sources.list
 ```
+## Enabling TearFree mode
+```bash
+xrandr --output HDMI-A-1 --set "TearFree" on
+```
