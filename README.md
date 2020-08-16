@@ -7,3 +7,8 @@ input=test.pdf ; output=test_out.pdf; ghostscript -sDEVICE=pdfwrite -dCompatibil
 ```
 Requirements:
 - Ghostscript
+
+## Adding non-free / contrib sources (Debian)
+```bash
+sudo sed -i 's/main/main non-free contrib/g' /etc/apt/sources.list
+```
