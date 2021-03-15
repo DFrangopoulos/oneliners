@@ -3,7 +3,7 @@ A compilation of handy oneliners
 
 
 ## PCL Printing (Port 9100)
-Convert the PDF to PCL.
+Convert the PDF to PCL and send to pritner
 ```bash
 cat input.pdf | gs -sDEVICE=pxlmono -q -dNOPAUSE -dPDFFitPage -dBATCH -sPAPERSIZE=a4 -sOutputFile=- - | nc -w1 <printer_ip> 9100
 ```
@@ -19,12 +19,23 @@ sudo sed -i 's/main/main non-free contrib/g' /etc/apt/sources.list
 ```bash
 xrandr --output HDMI-A-1 --set "TearFree" on
 ```
-## Flatten Directory Tree
+## Flattening a directory tree
 ```bash
 mkdir ~/Desktop/Extracted && find . -type f | xargs -d '\n' cp -t  ~/Desktop/Extracted/
 ```
 
-## Configure Git for SSH Push
+## Configuring git for SSH pushes
 ```bash
 git remote set-url origin git@github.com:DFrangopoulos/<repo>.git
+```
+
+# cheatsheet
+A compilation of randomness
+
+##LUKS Encrypt a Drive
+```bash
+sudo cryptsetup luksFormat /dev/sd<x>
+sudo cryptsetup lunksOpen /dev/sd<x> vol1
+sudo mkfs.ext4 -L <Label> /dev/mapper/vol1
+sudo cryptsetup luksClose vol1
 ```
