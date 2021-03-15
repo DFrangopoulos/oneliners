@@ -9,7 +9,7 @@ cat input.pdf | gs -sDEVICE=pxlmono -q -dNOPAUSE -dPDFFitPage -dBATCH -sPAPERSIZ
 ```
 Send to printer.
 ```bash
-cat output.dpf | nc -w1 <ip> 9100
+cat output.pcl | nc -w1 <ip> 9100
 ```
 ## Reducing the size of PDFs
 ```bash
