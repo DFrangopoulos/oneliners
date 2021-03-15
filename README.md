@@ -32,10 +32,10 @@ git remote set-url origin git@github.com:DFrangopoulos/<repo>.git
 # cheatsheet
 A compilation of randomness
 
-##LUKS Encrypt a Drive
+## LUKS Encrypt a Drive
 ```bash
 sudo cryptsetup luksFormat /dev/sd<x>
-sudo cryptsetup lunksOpen /dev/sd<x> vol1
-sudo mkfs.ext4 -L <Label> /dev/mapper/vol1
+sudo cryptsetup luksOpen /dev/sd<x> vol1
+sudo mkfs.ext4 -L <some_label> /dev/mapper/vol1
 sudo cryptsetup luksClose vol1
 ```
