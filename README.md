@@ -26,7 +26,12 @@ sudo sed -i 's/main/main non-free contrib/g' /etc/apt/sources.list
 ```bash
 xrandr --output HDMI-A-1 --set "TearFree" on
 ```
-## Extract all files from current directory and subdirectories
+## Flatten Directory Tree
 ```bash
 mkdir ~/Desktop/Extracted && find . -type f | xargs -d '\n' cp -t  ~/Desktop/Extracted/
+```
+
+##Configure Git for SSH Push
+```bash
+git remote set-url origin git@github.com:DFrangopoulos/<repo>.git
 ```
