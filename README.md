@@ -40,10 +40,37 @@ sudo mkfs.ext4 -L <some_label> /dev/mapper/vol1
 sudo cryptsetup luksClose vol1
 ```
 
+## Check IOMMU Groups
+```bash
+#!/bin/bash
+shopt -s nullglob
+for g in /sys/kernel/iommu_groups/*; do
+    echo "IOMMU Group ${g##*/}:"
+    for d in $g/devices/*; do
+        echo -e "\t$(lspci -nns ${d##*/})"
+    done;
+done;
+```
+## Export Mdadm config
+```bash
+sudo mdadm --detail --scan >> /etc/mdadm/mdadm.conf
+```
 
 # packages
 A list of useful packages
 
-* cryptsetup
-* git
+* cryptsetup -> LUKS
+* git 
 * gvfs
+* omxplayer -> can play media directly to framebuffer
+* sqlitebrowser
+* bmon
+* filezilla
+* wireshark
+* qdristat
+* virt-manager
+* mdadm
+
+# ressources
+
+* https://www.frederickding.com/posts/2017/08/luks-encrypted-dvd-bd-data-disc-guide-273316/
