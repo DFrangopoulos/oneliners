@@ -39,3 +39,11 @@ sudo cryptsetup luksOpen /dev/sd<x> vol1
 sudo mkfs.ext4 -L <some_label> /dev/mapper/vol1
 sudo cryptsetup luksClose vol1
 ```
+
+
+# packages
+A list of useful packages
+
+* cryptsetup
+* git
+* gvfs
