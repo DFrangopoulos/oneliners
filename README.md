@@ -59,17 +59,19 @@ sudo mdadm --detail --scan >> /etc/mdadm/mdadm.conf
 # packages
 A list of useful packages
 
-* cryptsetup -> LUKS
+* cryptsetup --> LUKS
 * git 
 * gvfs
-* omxplayer -> can play media directly to framebuffer
+* omxplayer --> can play media directly to framebuffer
 * sqlitebrowser
 * bmon
 * filezilla
 * wireshark
-* qdristat
+* qdirstat
 * virt-manager
 * mdadm
+* ghc --> Haskell
+* tree
 
 # ressources
 
